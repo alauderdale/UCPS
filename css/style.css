@@ -135,7 +135,7 @@ a:hover{
   background: -ms-linear-gradient(top,  rgba(162,169,178,1) 0%,rgba(94,94,94,1) 100%); /* IE10+ */
   background: linear-gradient(top,  rgba(162,169,178,1) 0%,rgba(94,94,94,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2a9b2', endColorstr='#5e5e5e',GradientType=0 ); /* IE6-9 */
-  
+
   padding: 5px 10px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -149,14 +149,14 @@ a:hover{
 #adminbar-inner a:hover{
  opacity:.8;
  }
- 
+
 /* header*/
 
 header{
-  
+
   border-bottom: 20px solid #f2f2f2;
 }
- 
+
 /* topnav*/
 
 #top-nav{
@@ -168,7 +168,7 @@ header{
 #top-nav ul{
   list-style: none;
   float: right;
-  
+
 }
 
 #top-nav li{
@@ -199,7 +199,7 @@ header{
 .logo:hover{
   opacity: .9;
 }
- 
+
 /* heading*/
 
 #heading{
@@ -239,7 +239,7 @@ header{
   background: -ms-linear-gradient(top,  rgba(162,169,178,1) 0%,rgba(94,94,94,1) 100%); /* IE10+ */
   background: linear-gradient(top,  rgba(162,169,178,1) 0%,rgba(94,94,94,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2a9b2', endColorstr='#5e5e5e',GradientType=0 ); /* IE6-9 */
-  
+
  padding: 10px 20px;
   border-radius: 5px;
   border-top: 1px solid rgba(255,255,255,.7);
@@ -253,68 +253,68 @@ header{
   text-decoration: none;
 }
 
-/* New in version 1.7+ */ 
- #slider3 { 
-  width: 980px; 
-  height: 374px; 
-  list-style: none; 
- } 
- /* images with caption */ 
- #slider3 img { 
-  width: 100%; 
-  height: auto; 
- } 
- /* position the panels so the captions appear correctly */ 
- #slider3 .panel { position: relative; } 
- /* captions */ 
- #slider3 .caption-top, #slider3 .caption-right, 
- #slider3 .caption-bottom, #slider3 .caption-left { 
-  color: #fff; 
-  padding: 10px; 
-  margin: 0; 
-  position: relative; 
-  z-index: 10; 
-  
- } 
- /* Top caption - padding is included in the width (480px here, 500px in the script), same for height */ 
- #slider3 .caption-top { 
-  left: 0; 
-  top: 0; 
-  width: 480px; 
-  height: 30px; 
- } 
- /* Right caption - padding is included in the width (130px here, 150px in the script), same for height */ 
- #slider3 .caption-right { 
-  right: 0; 
-  bottom: 10px; 
-  width: 422px; 
-  height: 245px; 
+/* New in version 1.7+ */
+ #slider3 {
+  width: 980px;
+  height: 374px;
+  list-style: none;
+ }
+ /* images with caption */
+ #slider3 img {
+  width: 100%;
+  height: auto;
+ }
+ /* position the panels so the captions appear correctly */
+ #slider3 .panel { position: relative; }
+ /* captions */
+ #slider3 .caption-top, #slider3 .caption-right,
+ #slider3 .caption-bottom, #slider3 .caption-left {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+
+ }
+ /* Top caption - padding is included in the width (480px here, 500px in the script), same for height */
+ #slider3 .caption-top {
+  left: 0;
+  top: 0;
+  width: 480px;
+  height: 30px;
+ }
+ /* Right caption - padding is included in the width (130px here, 150px in the script), same for height */
+ #slider3 .caption-right {
+  right: 0;
+  bottom: 10px;
+  width: 422px;
+  height: 245px;
   padding: 25px;
   background-color: rgba(0,0,0,.8);
   border: 1px solid #000;
-  
- } 
- /* Bottom caption - padding is included in the width (480px here, 500px in the script), same for height */ 
- #slider3 .caption-bottom { 
-  left: 0; 
-  bottom: 0; 
-  width: 480px; 
-  height: 30px; 
- } 
- /* Left caption - padding is included in the width (130px here, 150px in the script), same for height */ 
- #slider3 .caption-left { 
-  left: 0; 
-  bottom: 0; 
-  width: 130px; 
-  height: 180px; 
- } 
- /* Caption close button */ 
- .caption-top .close, .caption-right .close, 
- .caption-bottom .close, .caption-left .close { 
-  font-size: 80%; 
-  cursor: pointer; 
-  float: right; 
-  display: inline-block; 
+
+ }
+ /* Bottom caption - padding is included in the width (480px here, 500px in the script), same for height */
+ #slider3 .caption-bottom {
+  left: 0;
+  bottom: 0;
+  width: 480px;
+  height: 30px;
+ }
+ /* Left caption - padding is included in the width (130px here, 150px in the script), same for height */
+ #slider3 .caption-left {
+  left: 0;
+  bottom: 0;
+  width: 130px;
+  height: 180px;
+ }
+ /* Caption close button */
+ .caption-top .close, .caption-right .close,
+ .caption-bottom .close, .caption-left .close {
+  font-size: 80%;
+  cursor: pointer;
+  float: right;
+  display: inline-block;
  }
 
 /*container*/
@@ -379,7 +379,7 @@ header{
 }
 
 
-ul.event-meta { 
+ul.event-meta {
   font-size: 11pt;
   list-style: none;
 }
@@ -429,6 +429,23 @@ ul.home-announcments li{
   margin: 20px 5px 0px 10px;
   box-shadow: 0px 1px 2px rgba(0,0,0,.4);
   height: 580px;
+  z-index:2;
+}
+
+ul.home-announcments li, ul.home-announcments{
+
+-webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+
+-webkit-transition-property: -webkit-transform, opacity;
+   -moz-transition-property:    -moz-transform, opacity;
+    -ms-transition-property:     -ms-transform, opacity;
+     -o-transition-property:         top, left, opacity;
+        transition-property:         transform, opacity;
+
 }
 
 .announcment-content{
@@ -474,4 +491,5 @@ footer{
   border-top: 10px solid #f2f2f2;
   background-image: url(../images/footer-bg.png);
   display: inline-block;
+
 }
