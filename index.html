@@ -85,7 +85,7 @@
      </ul>
     </div><!--end slider-->
   </div><!--end heading-->
-  <div id="container">
+  <div id="wrapper">
     <div class="events">
       <div class="events-title">
         <h1>Upcoming</h1>
@@ -132,84 +132,64 @@
     <div class="clearfix"></div>
       <div class="home-announcments-header">
         <h2>Daily Announcments</h2>
-        <form id="filter">
-          <fieldset>
-            <label><input type="radio" name="type" value="all" checked="checked">All Events</label>
-            <label><input type="radio" name="type" value="app">Applications</label>
-            <label><input type="radio" name="type" value="util">Utilities</label>
-          </fieldset>
-        </form><!--end filter-->
-        <select id="filter">
-        <option value="app" name="type">Apps</option>
-        <option value="app" name="type">Apps</option>
+        <nav id="filter">
+          <!--jquery generated filter items-->
+        </nav>
         </select>
       </div><!--end home announcments header-->
-      <ul id="applications" class="home-announcments">
-        <li data-id="id-1" data-type="util">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-          <div class="featured-img">
-          <img src="images/featured-img2.png">
-          </div>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
+      <section id="container">
+        <ul id="stage" class="home-announcments">
+          <li data-tags="Sports, Boys Basketball">
+            <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
+            <div class="featured-img">
+              <img src="images/featured-img2.png">
             </div>
-        </li><!--end announcment-->
-        <li data-id="id-2" data-type="app">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-          <div class="featured-img">
-          <img src="images/featured-img.png">
-          </div>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
+              <div class="announcment-content">
+                <h1><a href="#">New Job Postings</a></h1>
+                <h6>in <a href="#">high school</a></h6>
+                <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
+                <a href="#">Read More</a>
+              </div>
+          </li><!--end announcment-->
+          <li data-tags="Sports, Girls Basketball">
+            <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
+            <div class="featured-img">
+              <img src="images/featured-img2.png">
             </div>
-        </li><!--end announcment-->
-        <li data-id="id-3" data-type="util">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
+              <div class="announcment-content">
+                <h1><a href="#">New Job Postings</a></h1>
+                <h6>in <a href="#">high school</a></h6>
+                <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
+                <a href="#">Read More</a>
+              </div>
+          </li><!--end announcment-->
+          <li data-tags="math, High School">
+            <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
+            <div class="featured-img">
+              <img src="images/featured-img2.png">
             </div>
-        </li><!--end announcment-->
-        <li data-id="id-4" data-type="app">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
+              <div class="announcment-content">
+                <h1><a href="#">New Job Postings</a></h1>
+                <h6>in <a href="#">high school</a></h6>
+                <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
+                <a href="#">Read More</a>
+              </div>
+          </li><!--end announcment-->
+          <li data-tags="math, Middle School">
+            <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
+            <div class="featured-img">
+              <img src="images/featured-img2.png">
             </div>
-        </li><!--end announcment-->
-        <li data-id="id-5" data-type="app">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
-            </div>
-        </li><!--end announcment-->
-        <li data-id="id-6" data-type="util">
-          <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-          <div class="featured-img">
-          <img src="images/featured-img2.png">
-          </div>
-            <div class="announcment-content">
-            <h1><a href="#">New Job Postings</a></h1>
-            <h6>in <a href="#">high school</a></h6>
-            <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-            <a href="#">Read More</a>
-            </div>
-        </li><!--end announcment-->
-             </ul>
-  </div><!--end container-->
+              <div class="announcment-content">
+                <h1><a href="#">New Job Postings</a></h1>
+                <h6>in <a href="#">high school</a></h6>
+                <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
+                <a href="#">Read More</a>
+              </div>
+          </li><!--end announcment-->
+        </ul>
+     </section><!--end container-->
+  </div><!--end wrapper-->
   <footer>
   </footer>
 </body>

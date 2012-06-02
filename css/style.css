@@ -317,9 +317,9 @@ header{
   display: inline-block; 
  }
 
-/*container*/
+/*wrapper*/
 
-#container{
+#wrapper{
   width: 960px;
   margin: 0 auto;
   padding: 30px 10px;
@@ -411,7 +411,6 @@ ul.event-meta li{
 ul.home-announcments {
   list-style: none;
   margin-bottom: 20px;
-  float: left;
 }
 
 ul.home-announcments li{
@@ -429,6 +428,8 @@ ul.home-announcments li{
   margin: 20px 5px 0px 10px;
   box-shadow: 0px 1px 2px rgba(0,0,0,.4);
   height: 580px;
+  position: relative;
+  display: block;
 }
 
 .announcment-content{
@@ -446,22 +447,56 @@ ul.home-announcments li{
 }
 
 ul.home-announcments li .featured-img{
-width: 302px;
-margin-top: -5px;
-border-bottom: 1px solid #fff;
-float: left;
-height: 214px;
-background-color: #00192c;
+  width: 302px;
+  margin-top: -5px;
+  border-bottom: 1px solid #fff;
+  float: left;
+  height: 214px;
+  background-color: #00192c;
 }
 
 ul.home-announcments li .featured-img img{
-clear: both;
-position:absolute;
-clip:rect(0px,302px,214px,0px);
-width: 302px;
+  clear: both;
+  position:absolute;
+  clip:rect(0px,302px,214px,0px);
+  width: 302px;
 }
 
 /*filter*/
+
+#container{
+overflow: hidden;
+float: left;
+display: block;
+position: relative;
+min-height: 600px;
+}
+
+
+#filter{
+  margin-top: 20px;
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+#filter a{
+  color: #fff;
+  background-color: #999;
+  padding: 6px;
+  font-weight: 100;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  font-size: 11pt;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#container ul.hidden{
+  display: none;
+}
 
 
 /*footer*/
@@ -469,7 +504,6 @@ width: 302px;
 footer{
   width: 100%;
   height: 200px;
-  float: left;
   background-color: #000;
   border-top: 10px solid #f2f2f2;
   background-image: url(../images/footer-bg.png);
