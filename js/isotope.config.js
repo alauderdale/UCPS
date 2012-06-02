@@ -14,7 +14,4 @@ $('#filters a').click(function(){
   return false;
 });
 
-
-
-
 });
