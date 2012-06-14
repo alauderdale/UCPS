@@ -14,4 +14,13 @@ $('.events-title a').mouseout(function(){
 
 });
 
+$('ul#filters li a').click(function(){
+
+  $('ul#filters li a').removeClass('active');    
+   $(this).addClass('active');
+
+
+
+});
+
 });
