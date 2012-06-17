@@ -1,4 +1,4 @@
-<?php /* Template Name: High School Daily Announcments
+<?php /* Template Name: Secondary School Daily Announcments
  */ ?>
  
  
@@ -13,9 +13,9 @@
      </div>
    </div><!--end heading-->
    <div id="wrapper" class="subpage-wrapper">
-     <?php get_sidebar(); ?>
+     <?php get_sidebar('sssidebar'); ?>
      <div class="featured-header three-col">
-       <h2>Daily Announcments</h2>
+       <h2>Announcments</h2>
        
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
@@ -23,14 +23,14 @@
      
        <ul class="tag-cloud">
          <?php 
-         wp_tag_cloud( array( 'taxonomy' => 'hsday', format => 'list', largest => 10, smallest => 10 ) );
+         wp_tag_cloud( array( 'taxonomy' => 'ssday', format => 'list', largest => 10, smallest => 10 ) );
           ?>
        </ul>
      </div><!--end featured-->
      
            <!--start the loop-->
            <?php
-            $loop = new WP_Query( array( 'post_type' => 'hsannouncement', 'posts_per_page' => 50 ) );
+            $loop = new WP_Query( array( 'post_type' => 'ssannouncement', 'posts_per_page' => 50 ) );
              ?>
            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
            
@@ -46,7 +46,7 @@
          </li>
          
          <!--post categories-->
-           <?php the_terms( $post->ID, 'hsday', '<li class="category">', ' ', '</li>' ); ?>
+           <?php the_terms( $post->ID, 'ssday', '<li class="category">', ' ', '</li>' ); ?>
  
        </ul><!--end post meta-->
        <?php if ( has_post_thumbnail()) : ?>

@@ -1,14 +1,14 @@
-<?php /* Template Name: High School Page
+<?php /* Template Name: Secondary School Page
  */ ?>
 
 <?php get_header(); ?>
   <div id="heading">
     <div class="inner">
-      <h1>High School</h1>
+      <h1>Secondary School</h1>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
-    <?php get_sidebar('hssidebar'); ?>
+    <?php get_sidebar('sssidebar'); ?>
     <div class="featured-header three-col">
       <h2><?php the_title(); ?></h2>
       
