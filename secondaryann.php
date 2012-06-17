@@ -1,10 +1,10 @@
-<?php /* Template Name: High School Daily Announcments 
+<?php /* Template Name: Secondary School Daily Announcments 
  */ ?>
 
 <?php get_header(); ?>
   <div id="heading">
     <div class="inner">
-      <h1>High School</h1>
+      <h1>Secondry School</h1>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
@@ -15,12 +15,12 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis dolor, mattis non accumsan nec, vulputate et nisl. Morbi sapien purus, ultrices quis lacinia vel, cursus eu turpis. Maecenas id tortor metus. Nunc et mauris nisl, ut blandit nis
         <p>
         <ul class="tag-cloud">
-          <?php wp_list_categories('child_of=9&title_li='); ?>
+          <?php wp_list_categories('child_of=10&title_li='); ?>
         </ul>
     </div><!--end featured-->
     
           <!--start the loop-->
-          <?php query_posts('cat=9&showposts=5'); ?>
+          <?php query_posts('cat=10&showposts=5'); ?>
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           
     <div class="main three-col">
