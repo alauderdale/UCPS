@@ -11,7 +11,7 @@
    <div id="wrapper" class="subpage-wrapper">
      <?php get_sidebar('hssidebar'); ?>
      <div class="featured-header three-col">
-       <h2>Announcments</h2>
+       <h2>News From The High School</h2>
        
         <p>
         Browsing Announcments in <span class="single-cat-title"><?php single_cat_title(); ?></span>

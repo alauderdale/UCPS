@@ -15,7 +15,7 @@
    <div id="wrapper" class="subpage-wrapper">
      <?php get_sidebar('sssidebar'); ?>
      <div class="featured-header three-col">
-       <h2>Announcments</h2>
+       <h2>K-12 News</h2>
        
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
