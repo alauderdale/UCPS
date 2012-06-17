@@ -1,32 +1,30 @@
-<?php /* Template Name: High School Daily Announcments 
- */ ?>
-
 <?php get_header(); ?>
   <div id="heading">
     <div class="inner">
-    <!-- daily announcment page content-->
-    <?php if (have_posts()) : while (have_posts()) : the_post();?>
-    
-      <h1><?php the_title(); ?></h1>
+      <h1><?php
+      $category = get_the_category();
+      $parent = get_cat_name($category[0]->category_parent);
+      if (!empty($parent)) {
+      echo ' ' . $parent;
+      } else {
+      echo ' ' . $category[0]->cat_name;
+      }
+      ?></h1>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
-    <?php get_sidebar('hssidebar'); ?>
+    <?php get_sidebar(); ?>
     <div class="featured-header three-col">
-      <h2>Daily Announcments</h2>
-      
-       <?php the_content(); ?>
-     <?php endwhile; endif; ?>
-     <!-- end page content-->
+      <h2><?php single_cat_title(); ?></h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis dolor, mattis non accumsan nec, vulputate et nisl. Morbi sapien purus, ultrices quis lacinia vel, cursus eu turpis. Maecenas id tortor metus. Nunc et mauris nisl, ut blandit nis
+        <p>
      
-        <ul class="tag-cloud">
-          <?php wp_list_categories('child_of=9&title_li='); ?>
-        </ul>
     </div><!--end featured-->
     
           <!--start the loop-->
-          <?php query_posts('cat=9&showposts=5'); ?>
-          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
           
     <div class="main three-col">
       <h2>

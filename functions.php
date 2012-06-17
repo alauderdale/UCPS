@@ -4,13 +4,14 @@
 
   if (function_exists('register_sidebar')) {
   	register_sidebar(array(
-  		'name'=> 'Home Widget',
-  		'id' => 'home_widget',
+  		'name'=> 'hssidebar',
+  		'id' => 'hs_sidebar',
   		'before_widget' => '<li id="%1$s" class="widget %2$s">',
   		'after_widget' => '</li>',
   		'before_title' => '<h2 class="offscreen">',
   		'after_title' => '</h2>',
   	));
+  	
   }
 
 
@@ -21,6 +22,10 @@
 //sidebar nav
 
   register_nav_menu( 'sidebar_nav', __( 'Sidebar Navigation', 'mytheme' ) );
+
+//High School sidebar nav
+
+  register_nav_menu( 'hs_sidebar_nav', __( 'High School Sidebar Navigation', 'mytheme' ) );
 
   
   
