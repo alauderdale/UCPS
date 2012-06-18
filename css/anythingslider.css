@@ -65,7 +65,7 @@
 */
 /* slider window - top & bottom borders, active state */
 .anythingSlider-default.activeSlider .anythingWindow {
-	border-color: #7C9127;
+
 }
 /* Navigation buttons, active state */
 .anythingSlider-default.activeSlider .anythingControls a {

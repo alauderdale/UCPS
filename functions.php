@@ -1,5 +1,12 @@
 <?php  
 
+//set exerpt length
+
+function custom_excerpt_length( $length ) {
+	return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 //sidebar
 
   if (function_exists('register_sidebar')) {
@@ -95,6 +102,7 @@ function create_my_post_types() {
  			'rewrite' => array( 'slug' => '?ssday=' ),	// pretty permalinks for your taxonomy?
  		)
  	);
+ 	
 
 
  }

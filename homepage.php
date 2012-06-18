@@ -6,27 +6,49 @@
   <div id="heading">
     <div class="slider">
       <ul id="slider3">
+      
+   <!--   start the loop-->
+      <?php
+       $args = array(
+       	'tax_query' => array(
+       			'relation' => 'OR',
+       			array(
+       				'taxonomy' => 'ssday',
+       				'field' => 'featured',
+       				'terms' => array( 19 )
+       			),
+       			array(
+       				'taxonomy' => 'hsday',
+       				'field' => 'featured',
+       				'terms' => array( 19 )
+       			)
+       		)
+       );
+       $loop = new WP_Query( $args );
+        ?>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
        <li>
-        <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
+        <?php if ( has_post_thumbnail()) : ?>
+          <div class="slider-featuredimg">
+          	    <?php the_post_thumbnail(); ?>
+           </div><!--end featured img-->
+         <?php else : ?>
+         <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
+
+        <?php endif; ?>
         <div class="caption-right">
-         <h1>Music Show Tonight</h1>
-         <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac luctus tortor. Cras laoreet libero nec neque... hendrerit et euismod nisi mattis.</p>
+         <h1><?php the_title(); ?></h1>
+         <p><?php the_excerpt(); ?></p>
          <p>
-         <a href="#" class="slider-read-more">Read More</a>
+         <a href="<?php the_permalink(); ?>" class="slider-read-more">Read More</a>
          </p>
         </div>
        </li>
-       <li>
-        <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
-        <div class="caption-right">
-         <h1>Featured Post Title </h1>
-         <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac luctus tortor. Cras laoreet libero nec neque... hendrerit et euismod nisi mattis.</p>
-         <p>
-         <a href="#" class="slider-read-more">Read More</a>
-         </p>
-        </div>
-       </li>
-     </ul>
+       
+     <!--   end the loop-->
+         <?php endwhile; ?>	
+     
+        </ul>
     </div><!--end slider-->
   </div><!--end heading-->
   <div id="wrapper">

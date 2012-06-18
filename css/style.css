@@ -47,7 +47,7 @@ h1{
 
 h2{
   font-size: 17pt;
-  color: #777;
+  color: #222;
   line-height: 150%;
 }
 
@@ -241,7 +241,7 @@ header{
 }
 
 .slider h1{
-  font-size: 24pt;
+  font-size: 20pt!important;
   color: #fff;
   text-shadow: 0 1px 0 #000;
 }
@@ -293,7 +293,7 @@ header{
 /* New in version 1.7+ */
  #slider3 {
   width: 980px;
-  height: 374px;
+  height: 400px;
   list-style: none;
  }
  /* images with caption */
@@ -324,8 +324,8 @@ header{
  #slider3 .caption-right {
   right: 0;
   bottom: 10px;
-  width: 422px;
-  height: 245px;
+  width: 470px;
+  height: 320px;
   padding: 25px;
   background-color: rgba(0,0,0,.8);
   border: 1px solid #000;
@@ -708,6 +708,7 @@ ul.post-categories li:last-of-type:after{
 .post-featuredimg img{
   height: auto;
   width: 680px;
+  margin-bottom: 20px;
   border: 5px solid #bbb;
 }
 
