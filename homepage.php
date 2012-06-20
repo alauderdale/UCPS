@@ -38,10 +38,8 @@
         <?php endif; ?>
         <div class="caption-right">
          <h1><?php the_title(); ?></h1>
-         <p><?php the_excerpt(); ?></p>
-         <p>
+         <?php the_excerpt(); ?>
          <a href="<?php the_permalink(); ?>" class="slider-read-more">Read More</a>
-         </p>
         </div>
        </li>
        
