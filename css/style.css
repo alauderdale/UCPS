@@ -211,6 +211,10 @@ header{
   opacity: .9;
 }
 
+#top-nav li.current-menu-item a {
+  color: #00233b!important;
+}
+
 /* heading*/
 
 #heading{
@@ -227,7 +231,7 @@ header{
 
 .single-cat-title{
   font-weight: bold;
-  color: #8bb5cd;
+  color: #e0c75c;
 }
 
 /*slider*/
@@ -529,7 +533,8 @@ overflow: hidden;
 ul.home-announcments li .featured-img img{
 clear: both;
 clip:rect(0px,302px,214px,0px);
-width: 302px;
+width: 100%;
+height: auto;
 }
 
 /*filter*/

@@ -41,7 +41,7 @@
          </li>
          
          <!--post categories-->
-           <?php the_terms( $post->ID, 'hsday', '<li class="category">', ' ', '</li>' ); ?>
+           <?php the_terms( $post->ID, 'ssday', '<li class="category">', ' ', '</li>' ); ?>
  
        </ul><!--end post meta-->
        <?php if ( has_post_thumbnail()) : ?>

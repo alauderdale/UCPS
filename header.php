@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>
     <?php wp_title(''); ?> <?php bloginfo('name'); ?>
   </title>

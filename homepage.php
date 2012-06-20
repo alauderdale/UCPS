@@ -1,4 +1,6 @@
-<?php /* Template Name: Home
+<?php
+ /* 
+ Template Name: Home
  */ ?>
 
 <?php get_header(); ?>
@@ -15,18 +17,18 @@
        			array(
        				'taxonomy' => 'ssday',
        				'field' => 'featured',
-       				'terms' => array( 19 )
+       				'terms' => array( 19,5 )
        			),
        			array(
        				'taxonomy' => 'hsday',
        				'field' => 'featured',
-       				'terms' => array( 19 )
+       				'terms' => array( 19,5 )
        			)
        		)
        );
-       $loop = new WP_Query( $args );
+       $loop2 = new WP_Query( $args );
         ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
        <li>
         <?php if ( has_post_thumbnail()) : ?>
           <div class="slider-featuredimg">
@@ -44,7 +46,9 @@
        </li>
        
      <!--   end the loop-->
-         <?php endwhile; ?>	
+         <?php endwhile; 
+         // Reset Post Data         
+         ?>	
      
         </ul>
     </div><!--end slider-->
@@ -95,73 +99,52 @@
     </div><!--end events-->
     <div class="clearfix"></div>
     <div class="home-announcments-header">
-      <h2>Daily Announcments</h2>
+      <h2>Recent Announcments</h2>
     </div><!--end home announcments header-->
     <ul id="filters">
       <li><a href="#" class="active" data-filter="*">all</a></li>
-      <li><a href="#" data-filter=".Math">Math</a></li>
-      <li><a href="#" data-filter=".science">Science</a></li>
-      <li><a href="#" data-filter=".school">School</a></li>
-      <li><a href="#" data-filter=".art">Art</a></li>
+      <li><a href="#" data-filter=".hsannouncement">High School</a></li>
+      <li><a href="#" data-filter=".ssannouncement">Secondary School</a></li>
     </ul>
     <ul id="container" class="home-announcments">
-      <li class="element Math school">
-        <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
+    
+    <!--   start the loop-->
+       <?php
+        $query = new WP_Query( 
+        array( 
+        'post_type' => 
+          array( 'hsannouncement', 'ssannouncement'),
+          'posts_per_page' => 18
+          
+         )
+         
+         
+          );
+         ?>
+       <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+    
+      <li class="High-School <?php echo get_post_type( $post->ID ); ?>">
+        <h6 class="announcment-date">POSTED ON <?php the_time('d'); ?> <span><?php the_time('M'); ?> </span><span><?php the_time('Y'); ?></h6>
         <div class="featured-img">
-          <img src="<?php bloginfo('template_url'); ?>/images/featured-img2.png">
+        
+          <?php if ( has_post_thumbnail()) : ?>
+            <div class="slider-featuredimg">
+            	    <?php the_post_thumbnail(); ?>
+             </div><!--end featured img-->
+           <?php else : ?>
+           <img src="http://placekitten.com/400/300" alt="">
+           <?php endif; ?>	
         </div>
         <div class="announcment-content">
-          <h1><a href="#">Math</a></h1>
-          <h6>in <a href="#">high school</a></h6>
-          <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. Morbi fermentum tincidunt viverra. Maecenas ac...</p>
-          <a href="#">Read More</a>
+          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+          <p><?php the_excerpt(); ?></p>
+          <a href="<?php the_permalink(); ?>">Read More</a>
         </div>
       </li><!--end announcment-->
-      <li class="element science">
-        <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-        <div class="featured-img">
-          <img src="http://placekitten.com/g/200/200">
-        </div>
-        <div class="announcment-content">
-          <h1><a href="#">Science</a></h1>
-          <h6>in <a href="#">high school</a></h6>
-          <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis.</p>
-          <a href="#">Read More</a>
-        </div>
-      </li><!--end announcment-->
-      <li class="element art school">
-        <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-        <div class="announcment-content">
-          <h1><a href="#">Art</a></h1>
-          <h6>in <a href="#">high school</a></h6>
-          <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. </p>
-          <a href="#">Read More</a>
-        </div>
-      </li><!--end announcment-->
-      <li class="element art school">
-        <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-        <div class="featured-img">
-          <img src="<?php bloginfo('template_url'); ?>/images/featured-img2.png">
-        </div>
-        <div class="announcment-content">
-          <h1><a href="#">Temporary Employment Opportunity: Education & Leadership</a></h1>
-          <h6>in <a href="#">high school</a></h6>
-          <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. </p>
-          <a href="#">Read More</a>
-        </div>
-      </li><!--end announcment-->
-      <li class="element art school">
-        <h6 class="announcment-date">POSTED ON APR. 7th 2012</h6>
-        <div class="featured-img">
-          <img src="<?php bloginfo('template_url'); ?>/images/featured-img2.png">
-        </div>
-        <div class="announcment-content">
-          <h1><a href="#">Art</a></h1>
-          <h6>in <a href="#">high school</a></h6>
-          <p>Etiam adipiscing aliquet turpis, tempus blandit orci aliquam eu. In mattis vestibulum ligula at tempor. Nulla sit amet tellus et lorem pharetra sagittis. </p>
-          <a href="#">Read More</a>
-        </div>
-      </li><!--end announcment-->
+      
+      <!--   end the loop-->
+    <?php endwhile; ?>	
+      
     </ul>
   </div><!--end wrapper-->
 
