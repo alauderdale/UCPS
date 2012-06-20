@@ -35,7 +35,12 @@
            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
            
      <div class="main three-col">
-       <h2>
+       <?php if ( has_post_thumbnail()) : ?>
+         <div class="post-featuredimg-head">
+         	    <?php the_post_thumbnail(); ?>
+          </div><!--end featured img-->
+       <?php endif; ?>
+       <h2 style="min-height: 99px;">
          <a href="<?php the_permalink(); ?>">
            <?php the_title(); ?>
          </a>
@@ -49,13 +54,6 @@
            <?php the_terms( $post->ID, 'hsday', '<li class="category">', ' ', '</li>' ); ?>
  
        </ul><!--end post meta-->
-       <?php if ( has_post_thumbnail()) : ?>
-         <div class="post-featuredimg">
-         	  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-         	    <?php the_post_thumbnail(); ?>
-         	  </a>
-          </div><!--end featured img-->
-       <?php endif; ?>
        <div class="content">
          <?php the_excerpt(); ?>
        </div><!--end content-->
