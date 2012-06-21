@@ -42,6 +42,16 @@ add_filter('excerpt_more', 'new_excerpt_more');
 //Secondary School sidebar nav
 
   register_nav_menu( 'ss_sidebar_nav', __( 'Secondary School Sidebar Navigation', 'mytheme' ) );
+  
+//Footer 1 sidebar nav
+
+  register_nav_menu( 'footet_1__nav', __( 'Footer Nav Col 1', 'mytheme' ) );
+
+//Footer 2 sidebar nav
+
+  register_nav_menu( 'footet_2__nav', __( 'Footer Nav Col 2', 'mytheme' ) );
+  
+
 
   
   
@@ -107,9 +117,6 @@ function create_my_post_types() {
  			'rewrite' => array( 'slug' => '?ssday=' ),	// pretty permalinks for your taxonomy?
  		)
  	);
- 	
-
-
  }
  add_action('init', 'my_custom_taxonomies', 0);
 

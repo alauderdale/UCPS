@@ -4,52 +4,14 @@
       <div class="four-col">
         <h6>Links</h6>
         <ul class="footer-links">
-          <li>
-            <a href="#">
-              Jobs
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Sports
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Prospect Students
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Other Link
-            </a>
-          </li>
-        </ul>
+           <?php wp_nav_menu( array('menu' => 'footer_1_nav' )); ?>       
+         </ul>
       </div><!--end 4 col-->
       <div class="four-col">
         <h6>Links</h6>
-        <ul class="footer-links">
-          <li>
-            <a href="#">
-              Link
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              School Policy
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Another Link
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Jobs
-            </a>
-          </li>
-        </ul>
+       <ul class="footer-links">
+            <?php wp_nav_menu( array('menu' => 'footer_2_nav' )); ?>           
+        </ul> 
       </div><!--end 4 col-->
       <div class="four-col">
         <h6>Social</h6>
