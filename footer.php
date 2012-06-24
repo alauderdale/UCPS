@@ -1,6 +1,6 @@
  </div><!--end wrapper-->
   <footer>
-    <div class="inner">
+    <div class="inner clearfix">
       <div class="four-col">
         <h6>Links</h6>
         <ul class="footer-links">
@@ -26,6 +26,9 @@
         <h6>Local Wheather</h6>
       </div><!--end 4 col-->
     </div><!--end inner-->
+    <div class="copy">
+      <p>&copy; 2012 All Rights Reserved Union Colony Schools | Website by <a target="_blank" href="http://eternalcontrast.com/">Eternal Contrast Designs</a></p>
+    </div>
   </footer>
 <?php wp_footer(); ?>
 </body>

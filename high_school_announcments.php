@@ -12,6 +12,12 @@ Template Name: High School Daily Announcments
     <div class="inner">
      <!-- daily announcment page content-->
      <h1><?php the_title(); ?></h1>
+     <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
 

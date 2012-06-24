@@ -8,7 +8,13 @@ Template Name: Events
 <?php get_header(); ?>
   <div id="heading" class="event-heading">
     <div class="inner">
-      <h1>Events</h1>
+      <h1>Upcoming Events</h1>
+      <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
@@ -37,7 +43,7 @@ Template Name: Events
             #d
           </span>
         </div>
-        <h3><a href="#_EVENTURL">#_EVENTNAME</a></h3>
+        <h3><a class="fancybox fancybox.ajax" href="#_EVENTURL">#_EVENTNAME</a></h3>
         <ul class="event-meta">
           <li class="event-time">
           #_12HSTARTTIME -  #_12HENDTIME

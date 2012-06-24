@@ -2,6 +2,12 @@
   <div id="heading" class="ss-heading">
     <div class="inner">
       <h1>Secondary School</h1>
+      <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">

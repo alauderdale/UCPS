@@ -50,6 +50,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 add_action( 'init', 'create_my_post_types' );
 
 function create_my_post_types() {
+
 	register_post_type( 'hsannouncement',
 		array(
 			'labels' => array(
@@ -74,6 +75,18 @@ function create_my_post_types() {
 
 		)
 	);
+
+  register_post_type( 'hsstaff',
+    array(
+      'labels' => array(
+        'name' => __( 'High School Staff' ),
+        'singular_name' => __( 'HS Staff Member' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+      'public' => true,
+
+    )
+  );
 
 
 }

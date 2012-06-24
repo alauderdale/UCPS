@@ -311,6 +311,22 @@ header{
   font-size: 26pt;
 }
 
+/* breadcrumbs */
+
+.breadcrumbs{
+  margin:20px 0;
+  color:#999;
+  padding:10px;
+}
+
+.breadcrumbs a{
+  color:#fff;
+}
+
+.breadcrumbs a:hover{
+  color: #015a9d;
+}
+
 .hs-heading{
   background-image:url(../images/hs_bg.png);
 }
@@ -751,7 +767,8 @@ ul#filters li a:hover{
 
 .subpage-wrapper{
   position: relative;
-  top: -140px;
+  top: -60px;
+  padding-top:0!important;
 }
 
 /*sidebar*/
@@ -776,6 +793,7 @@ sidebar li a{
   display: block;
   padding: 8px 15px 8px 15px;
   color: #666;
+  line-height:1em;
 }
 
 
@@ -828,7 +846,7 @@ ul.tag-cloud li a{
   color: #fff;
   text-decoration: none;
   background-color: #356884;
-  padding: 7px;
+  padding: 2px 7px;
   border-radius: 5px;
   font-weight: 200;
   letter-spacing: 1px;
@@ -965,8 +983,48 @@ a.read-more:hover{
   border: 1px solid #00192c;
 }
 
-/*themes*/
+/*staff*/
 
+.staff-featuredimg img{
+width:100px;
+height:auto;
+
+}
+
+.staff-featuredimg {
+ border-radius: 50%;
+ width:100px;
+ height:100px;
+ overflow:hidden;
+ float:left;
+
+}
+
+.staff-content{
+  float:left;
+  width:450px;
+  margin-left:40px;
+}
+
+.staff-single{
+width:100%;
+float:left;
+margin-top:20px;
+margin-bottom:40px;
+}
+
+.staff-info ul {
+  margin-bottom:30px;
+}
+
+.staff-info ul li{
+  float:none;
+  margin:5px 0;
+}
+
+.staff-info .post-meta-key{
+  font-weight:bold;
+}
 
 
 
@@ -1050,6 +1108,14 @@ footer a{
   width: 200px;
   padding-right:40px;
 }
+
+footer .copy{
+  text-align:center;
+  margin:80px 0 0 0;
+}
+
+
+
 
 /* hidden menu */
 

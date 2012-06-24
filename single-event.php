@@ -1,21 +1,11 @@
-<?php get_header(); ?>
-  <div id="heading">
-    <div class="inner">
-      <h1>Events</h1>
-    </div>
-  </div><!--end heading-->
-  <div id="wrapper" class="subpage-wrapper">
-    <?php get_sidebar('eventssidebar'); ?>
-
+  <?php wp_head(); ?>
           <!--start the loop-->
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
     <div class="main three-col">
       <h2>
-        <a href="<?php the_permalink(); ?>">
           <?php the_title(); ?>
-        </a>
       </h2>
       <ul class="post-meta clearfix">
         <li class="date">
@@ -35,14 +25,8 @@
           </a>
         </div><!--end featured img-->
       <?php endif; ?>
-      <div class="pagination">
-          <p class="prev"><?php previous_post_link('%link','«Previous Event'); ?> </p>
-          <p class="next"> <?php next_post_link('%link','Next Event»'); ?> </p>
-      </div>
     </div><!--end main-->
 
     <!--end the loop-->
     <?php endwhile; ?>
     <?php endif; ?>
-
-    <?php get_footer(); ?>

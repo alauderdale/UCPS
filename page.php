@@ -2,12 +2,18 @@
   <div id="heading">
     <div class="inner">
       <h1><?php the_title(); ?></h1>
+      <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
     <?php get_sidebar(); ?>
     <div class="main three-col">
-    
+
           <!--start the loop-->
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
@@ -15,9 +21,9 @@
         <?php the_content(); ?>
       </div><!--end content-->
     </div><!--end main-->
-    
+
     <!--end the loop-->
-    <?php endwhile; ?>	
-    <?php endif; ?>	
-    
+    <?php endwhile; ?>
+    <?php endif; ?>
+
     <?php get_footer(); ?>

@@ -2,12 +2,18 @@
   <div id="heading" class="hs-heading">
     <div class="inner">
       <h1>High School</h1>
+      <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
     <?php get_sidebar('hssidebar'); ?>
     <div class="featured-header three-col hs-head">
-      <h2>K-12 News</h2>
+      <h2>News From The High School</h2>
         <p>
           Browsing Announcments Tagged "<span class="single-cat-title"><?php single_cat_title(); ?></span>"
         </p>

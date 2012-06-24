@@ -11,8 +11,8 @@
   <!--custom scripts-->
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
   <!--slider-->
-  <link href="<?php bloginfo('template_url'); ?>/css/anythingslider.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/jquery.anythingslider.js"></script>
+  <link href="<?php bloginfo('template_url'); ?>/css/anythingslider.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/jquery.anythingslider.fx.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/slider-settings.js"></script>
   <!--isotope-->
@@ -22,6 +22,10 @@
    <script src="<?php bloginfo('template_url'); ?>/js/appearing.menu.js"></script>
     <!--smooth scroll-->
    <script src="<?php bloginfo('template_url'); ?>/js/smoothscroll.js"></script>
+    <!--fancybox-->
+    <link href="<?php bloginfo('template_url'); ?>/css/fancybox.css" rel="stylesheet">
+   <script src="<?php bloginfo('template_url'); ?>/js/fancybox.js"></script>
+   <script src="<?php bloginfo('template_url'); ?>/js/fancybox.settings.js"></script>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -37,7 +41,7 @@
   <header>
     <div id="adminbar">
       <div id="adminbar-inner">
-        <h1>Call Us: <span class="phone">999.999.9999</span></h1>
+        <h1>Call Us: <span class="phone">970.673.4546</span></h1>
         <a href="https://si.greeleyschools.org/campus/greeley.jsp" class="checkgrades" target="_blank">check your grades</a>
       </div><!--end adminbar inner-->
     </div><!--end adminbar -->

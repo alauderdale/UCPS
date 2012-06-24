@@ -66,7 +66,7 @@
                  'format' => '
 
                   <div class="event">
-          <h3><a href="#_EVENTURL">#_EVENTNAME</a></h3>
+          <h3><a class="fancybox fancybox.ajax" href="#_EVENTURL">#_EVENTNAME</a></h3>
           <ul class="event-meta">
             <li>
             #D, #M #d, #Y
@@ -116,7 +116,7 @@
               <?php if ( has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(); ?>
               <?php else : ?>
-                <img src="http://placekitten.com/400/300" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/images/screenshot.png" alt="">
               <?php endif; ?>
             </div><!--end slider featured img-->
           </div>

@@ -1,16 +1,22 @@
 <?php get_header(); ?>
   <div id="heading">
     <div class="inner">
-      <h1>Announcments</h1>
+      <h1>Info</h1>
+      <div class="breadcrumbs">
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+      </div>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
     <?php get_sidebar(); ?>
-    
+
           <!--start the loop-->
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-          
+
     <div class="main three-col">
       <h2>
         <a href="<?php the_permalink(); ?>">
@@ -37,9 +43,9 @@
       </div><!--end content-->
 
     </div><!--end main-->
-    
+
     <!--end the loop-->
-    <?php endwhile; ?>	
-    <?php endif; ?>	
-    
+    <?php endwhile; ?>
+    <?php endif; ?>
+
     <?php get_footer(); ?>
