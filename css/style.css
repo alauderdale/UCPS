@@ -865,6 +865,7 @@ ul.tag-cloud li a:hover{
 
 .featured-header h2, .featured-header p {
   color: #fff;
+  margin-bottom:10px;
 }
 
 .main h2{
