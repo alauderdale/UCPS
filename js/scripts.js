@@ -16,11 +16,13 @@ $('.events-title a').mouseout(function(){
 
 $('ul#filters li a').click(function(){
 
-  $('ul#filters li a').removeClass('active');    
+  $('ul#filters li a').removeClass('active');
    $(this).addClass('active');
 
 
 
 });
+
+$('.eventful a').addClass('fancybox').addClass('fancybox.ajax')
 
 });

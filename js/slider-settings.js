@@ -4,16 +4,11 @@ $(function(){
   /* this "custom" code is the equivalent of the base caption functions */ 
   .anythingSliderFx({ 
    inFx: { 
-    '.caption-top'    : { top: 0, opacity: 1, duration: 400 }, 
     '.caption-right'  : { right: 0, opacity: 1, duration: 400 }, 
-    '.caption-bottom' : { bottom: 0, opacity: 1, duration: 400 }, 
-    '.caption-left'   : { left: 0, opacity: 1, duration: 400 } 
    }, 
    outFx: { 
-    '.caption-top'    : { top: -50, opacity: 0, duration: 350 }, 
-    '.caption-right'  : { right: -150, opacity: 0, duration: 350 }, 
-    '.caption-bottom' : { bottom: -50, opacity: 0, duration: 350 }, 
-    '.caption-left'   : { left: -150, opacity: 0, duration: 350 } 
+
+    '.caption-right'  : { right: -150, opacity: 0, duration: 350 }
    } 
   }) 
   /* add a close button (x) to the caption */ 

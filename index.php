@@ -15,11 +15,11 @@
           <?php wp_list_categories('title_li='); ?>
         </ul>
     </div><!--end featured-->
-    
+
           <!--start the loop-->
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-          
+
     <div class="main three-col">
       <h2>
         <a href="<?php the_permalink(); ?>">
@@ -46,9 +46,9 @@
       </div><!--end content-->
       <a class="read-more" href="<?php the_permalink(); ?>">Read More...</a>
     </div><!--end main-->
-    
+
     <!--end the loop-->
-    <?php endwhile; ?>	
-    <?php endif; ?>	
-    
+    <?php endwhile; ?>
+    <?php endif; ?>
+
     <?php get_footer(); ?>

@@ -1,9 +1,9 @@
-<?php  
+<?php
 
 //set exerpt length
 
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -12,25 +12,11 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-//sidebar
-
-  if (function_exists('register_sidebar')) {
-  	register_sidebar(array(
-  		'name'=> 'hssidebar',
-  		'id' => 'hs_sidebar',
-  		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-  		'after_widget' => '</li>',
-  		'before_title' => '<h2 class="offscreen">',
-  		'after_title' => '</h2>',
-  	));
-  	
-  }
-
 
 //main nav
 
   register_nav_menu( 'main_nav', __( 'Main navigation menu', 'mytheme' ) );
-  
+
 //sidebar nav
 
   register_nav_menu( 'sidebar_nav', __( 'Sidebar Navigation', 'mytheme' ) );
@@ -38,32 +24,33 @@ add_filter('excerpt_more', 'new_excerpt_more');
 //High School sidebar nav
 
   register_nav_menu( 'hs_sidebar_nav', __( 'High School Sidebar Navigation', 'mytheme' ) );
-  
+
 //Secondary School sidebar nav
 
   register_nav_menu( 'ss_sidebar_nav', __( 'Secondary School Sidebar Navigation', 'mytheme' ) );
-  
+
 //Footer 1 sidebar nav
 
-  register_nav_menu( 'footet_1__nav', __( 'Footer Nav Col 1', 'mytheme' ) );
+  register_nav_menu( 'footer2', __( 'Footer Nav Col 1', 'mytheme' ) );
 
 //Footer 2 sidebar nav
 
-  register_nav_menu( 'footet_2__nav', __( 'Footer Nav Col 2', 'mytheme' ) );
-  
+  register_nav_menu( 'footer1', __( 'Footer Nav Col 2', 'mytheme' ) );
 
 
-  
-  
-  if ( function_exists( 'add_theme_support' ) ) { 
-    add_theme_support( 'post-thumbnails' ); 
-  }
+
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+}
 
 //create post types
 
 add_action( 'init', 'create_my_post_types' );
 
 function create_my_post_types() {
+
 	register_post_type( 'hsannouncement',
 		array(
 			'labels' => array(
@@ -72,11 +59,11 @@ function create_my_post_types() {
 			),
 			'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
 			'public' => true,
-			
+
 		)
 	);
-	
-	
+
+
 	register_post_type( 'ssannouncement',
 		array(
 			'labels' => array(
@@ -85,16 +72,41 @@ function create_my_post_types() {
 			),
 			'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
 			'public' => true,
-			
+
 		)
 	);
-	
-	
+
+  register_post_type( 'hsstaff',
+    array(
+      'labels' => array(
+        'name' => __( 'High School Staff' ),
+        'singular_name' => __( 'HS Staff Member' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+      'public' => true,
+
+    )
+  );
+
+  register_post_type( 'hs_sports',
+    array(
+      'labels' => array(
+        'name' => __( 'High School Sports' ),
+        'singular_name' => __( 'High School sport' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+      'public' => true,
+
+    )
+  );
+
+
 }
 
-//create high school daily announcment categories
+//create daily announcment categories
 
- // === CUSTOM TAXONOMIES === //
+//high school
+
  function my_custom_taxonomies() {
  	register_taxonomy(
  		'hsday',		// internal name = machine-readable taxonomy name
@@ -106,7 +118,9 @@ function create_my_post_types() {
  			'rewrite' => array( 'slug' => '?hsday=' ),	// pretty permalinks for your taxonomy?
  		)
  	);
- 	
+
+//secondary school
+
  	register_taxonomy(
  		'ssday',		// internal name = machine-readable taxonomy name
  		'ssannouncement',		// object type = post, page, link, or custom post-type
