@@ -5,18 +5,17 @@
     <?php wp_title(''); ?> <?php bloginfo('name'); ?>
   </title>
   <!--  stylesheets-->
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/nivo-slider.css" type="text/css" media="screen" />
   <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-  <link href="<?php bloginfo('template_url'); ?>/css/anythingslider.css" rel="stylesheet">
   <link href="<?php bloginfo('template_url'); ?>/css/fancybox.css" rel="stylesheet">
   <!--  jquery-->
   <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.6.2.min.js"></script>
   <!--custom scripts-->
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
   <!--slider-->
-  <script src="<?php bloginfo('template_url'); ?>/js/jquery.anythingslider.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/jquery.anythingslider.fx.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/slider-settings.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.nivo.slider.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.settings.js"></script>
   <!--isotope-->
   <script src="<?php bloginfo('template_url'); ?>/js/jquery.isotope.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/isotope.config.js"></script>

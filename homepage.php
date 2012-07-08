@@ -6,51 +6,86 @@
 <?php get_header(); ?>
 
   <div id="heading">
-    <div class="slider">
-      <ul id="slider3">
-
+    <div class="slider-wrapper theme-default">
+      <div id="slider" class="nivoSlider">
         <!--   start the loop-->
         <?php
          $args = array(
-         	'tax_query' => array(
-         			'relation' => 'OR',
-         			array(
-         				'taxonomy' => 'ssday',
-         				'field' => 'featured',
-         				'terms' => array( 12,5 )
-         			),
-         			array(
-         				'taxonomy' => 'hsday',
-         				'field' => 'featured',
-         				'terms' => array( 12,5 )
-         			)
-         		)
+          'tax_query' => array(
+              'relation' => 'OR',
+              array(
+                'taxonomy' => 'ssday',
+                'field' => 'featured',
+                'terms' => array( 12,5 )
+              ),
+              array(
+                'taxonomy' => 'hsday',
+                'field' => 'featured',
+                'terms' => array( 12,5 )
+              )
+            )
          );
          $loop2 = new WP_Query( $args );
           ?>
-
         <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
-          <li>
-              <div class="slider-featuredimg">
-                <?php if ( has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(); ?>
-                <?php else : ?>
-                  <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
-              </div><!--end featured img-->
-                <?php endif; ?>
-              <div class="caption-right">
-                <h1><?php the_title(); ?></h1>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="slider-read-more">Read More</a>
-              </div>
-          </li>
+          <?php if ( has_post_thumbnail()) : ?>
 
-       <!--   end the loop-->
-        <?php endwhile;
-           // Reset Post Data
-           ?>
-      </ul>
-    </div><!--end slider-->
+            <?php $id =  get_the_ID(); 
+                  $postid = "#post-".$id;
+
+            ?> 
+
+            <?php 
+
+            $default_attr = array(
+                  'title' => ($postid)
+                );
+
+            ?>
+
+            <?php the_post_thumbnail($size,$default_attr); ?>
+
+          <?php else : ?>
+            <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
+          <?php endif; ?>
+
+        <!--   end the loop-->
+        <?php endwhile;?>
+      </div><!--   end slider-->
+
+      <!--   start the loop-->
+        <?php
+         $args = array(
+          'tax_query' => array(
+              'relation' => 'OR',
+              array(
+                'taxonomy' => 'ssday',
+                'field' => 'featured',
+                'terms' => array( 12,5 )
+              ),
+              array(
+                'taxonomy' => 'hsday',
+                'field' => 'featured',
+                'terms' => array( 12,5 )
+              )
+            )
+         );
+         $loop2 = new WP_Query( $args );
+          ?>
+        <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
+
+      <div id="post-<?php the_ID(); ?>" class="nivo-html-caption">
+          <h1><?php the_title(); ?></h1>
+          <?php the_excerpt(); ?>
+          <a href="<?php the_permalink(); ?>" class="slider-read-more">Read More</a>
+      </div>
+    </div><!--   end slider wrapper-->
+
+     <!--   end the loop-->
+        <?php endwhile;?>
+
+
+
   </div><!--end heading-->
   <div id="wrapper">
     <div class="events">

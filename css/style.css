@@ -342,26 +342,7 @@ header{
 
 /*slider*/
 
-.slider{
-  width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
-  position: relative;
-  left: -55px;
-}
 
-.slider h1{
-  font-size: 20pt!important;
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
-  margin-bottom: 10px;
-}
-
-.slider p{
-  color: #f2f2f2;
-  margin-bottom: 25px;
-  line-height: 1.9em;
-}
 
 .slider-read-more {
   text-decoration: none;
@@ -375,7 +356,7 @@ header{
   background: linear-gradient(top,  rgba(176,186,196,1) 0%,rgba(89,106,114,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0bac4', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
 
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
   border-top: 1px solid rgba(255,255,255,.7);
   box-shadow: 0px 1px 0px #000;
@@ -402,69 +383,67 @@ header{
   border-top: none;
 }
 
-/* New in version 1.7+ */
- #slider3 {
-  width: 980px;
-  height: 400px;
-  list-style: none;
- }
- /* images with caption */
- #slider3 img {
-  width: 100%;
-  height: auto;
- }
- /* position the panels so the captions appear correctly */
- #slider3 .panel { position: relative; }
- /* captions */
- #slider3 .caption-top, #slider3 .caption-right,
- #slider3 .caption-bottom, #slider3 .caption-left {
-  color: #fff;
-  padding: 10px;
-  margin: 0;
-  position: relative;
-  z-index: 10;
+.slider-wrapper { 
+  width: 960px; 
+  margin: 0px auto;
+  
+}
 
- }
- /* Top caption - padding is included in the width (480px here, 500px in the script), same for height */
- #slider3 .caption-top {
-  left: 0;
-  top: 0;
-  width: 480px;
-  height: 30px;
- }
- /* Right caption - padding is included in the width (130px here, 150px in the script), same for height */
- #slider3 .caption-right {
-  right: 0;
-  bottom: 10px;
-  width: 640px;
-  height: 216px;
-  padding: 5px 25px 25px 25px;
-  background-color: rgba(0,0,0,.8);
-  border: 1px solid #000;
+.theme-default #slider {
+  height:330px!important;
 
- }
- /* Bottom caption - padding is included in the width (480px here, 500px in the script), same for height */
- #slider3 .caption-bottom {
-  left: 0;
-  bottom: 0;
-  width: 480px;
-  height: 30px;
- }
- /* Left caption - padding is included in the width (130px here, 150px in the script), same for height */
- #slider3 .caption-left {
-  left: 0;
-  bottom: 0;
-  width: 130px;
-  height: 180px;
- }
- /* Caption close button */
- .caption-top .close, .caption-right .close,
- .caption-bottom .close, .caption-left .close {
-  font-size: 80%;
-  cursor: pointer;
-  float: right;
-  display: inline-block;
- }
+}
+
+.theme-default .nivoSlider {
+  position:relative;
+  background:#fff url(../images/loading.gif) no-repeat 50% 50%;
+}
+.theme-default .nivoSlider img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:none;
+  width:100%;
+  height:auto;
+}
+.theme-default .nivoSlider a {
+  border:0;
+  display:block;
+}
+
+.theme-default .nivo-controlNav {
+  text-align: center;
+  padding: 20px 0;
+}
+.theme-default .nivo-controlNav a {
+  display:inline-block;
+  width:22px;
+  height:22px;
+  background:url(../images/bullets.png) no-repeat;
+  text-indent:-9999px;
+  border:0;
+  margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+  background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+  display:block;
+  width:30px;
+  height:30px;
+  background:url(../images/arrows.png) no-repeat;
+  text-indent:-9999px;
+  border:0;
+}
+.theme-default a.nivo-nextNav {
+  background-position:-30px 0;
+  right:15px;
+}
+.theme-default a.nivo-prevNav {
+  left:15px;
+}
+
 
 /*container*/
 
