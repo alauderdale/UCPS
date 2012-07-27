@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 //set exerpt length
 
 function custom_excerpt_length( $length ) {
@@ -21,13 +24,17 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
   register_nav_menu( 'sidebar_nav', __( 'Sidebar Navigation', 'mytheme' ) );
 
-//High School sidebar nav
+//Elementary School sidebar nav
 
-  register_nav_menu( 'hs_sidebar_nav', __( 'High School Sidebar Navigation', 'mytheme' ) );
+  register_nav_menu( 'hs_sidebar_nav', __( 'Elementary School Sidebar Navigation', 'mytheme' ) );
 
 //Secondary School sidebar nav
 
   register_nav_menu( 'ss_sidebar_nav', __( 'Secondary School Sidebar Navigation', 'mytheme' ) );
+
+  //Secondary School sidebar nav
+
+  register_nav_menu( 'board_sidebar_nav', __( 'UCPS Board Sidebar Navigation', 'mytheme' ) );
 
 //Footer 1 sidebar nav
 
@@ -54,8 +61,8 @@ function create_my_post_types() {
 	register_post_type( 'hsannouncement',
 		array(
 			'labels' => array(
-				'name' => __( 'High School Announcements' ),
-				'singular_name' => __( 'High School Announcement' )
+				'name' => __( 'Elementary School Announcements' ),
+				'singular_name' => __( 'Elementary School Announcement' )
 			),
 			'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
 			'public' => true,
@@ -79,7 +86,7 @@ function create_my_post_types() {
   register_post_type( 'hsstaff',
     array(
       'labels' => array(
-        'name' => __( 'High School Staff' ),
+        'name' => __( 'Elementary School Staff' ),
         'singular_name' => __( 'HS Staff Member' )
       ),
       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
@@ -91,8 +98,8 @@ function create_my_post_types() {
   register_post_type( 'hs_sports',
     array(
       'labels' => array(
-        'name' => __( 'High School Sports' ),
-        'singular_name' => __( 'High School sport' )
+        'name' => __( 'Elementary School Activities' ),
+        'singular_name' => __( 'High School Activity' )
       ),
       'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
       'public' => true,

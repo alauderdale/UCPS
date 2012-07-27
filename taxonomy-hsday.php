@@ -1,13 +1,13 @@
 <?php get_header(); ?>
   <div id="heading" class="hs-heading">
     <div class="inner">
-      <h1>High School</h1>
+      <h1>Elementary School</h1>
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
     <?php get_sidebar('hssidebar'); ?>
     <div class="featured-header three-col hs-head">
-      <h2>News From The High School</h2>
+      <h2>News From The Elementary School</h2>
         <p>
           Browsing Announcments Tagged "<span class="single-cat-title"><?php single_cat_title(); ?></span>"
         </p>

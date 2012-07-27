@@ -328,11 +328,11 @@ header{
 }
 
 .hs-heading{
-  background-image:url(../images/hs_bg.png);
+  background-image:url(../images/ss_bg.png);
 }
 
 .ss-heading{
-  background-image:url(../images/ss_bg.png);
+  background-image:url(../images/hs_bg.png);
 }
 
 .single-cat-title{

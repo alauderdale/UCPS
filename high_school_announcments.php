@@ -20,7 +20,7 @@ Template Name: High School Daily Announcments
   <?php get_sidebar('hssidebar'); ?>
 
   <div class="featured-header three-col hs-head">
-    <h2>News From The High School</h2>
+    <h2>News From The Elementary School</h2>
     <?php the_content(); ?>
 <?php endwhile; endif; ?>
     <!-- end page content-->

@@ -3,7 +3,7 @@
   <div id="heading" class="hs-heading">
     <div class="inner">
      <!-- daily announcment page content-->
-     <h1>High School</h1>
+     <h1>Elementary School</h1>
     </div>
   </div><!--end heading-->
 
