@@ -168,6 +168,11 @@ ul {
 
 /*admin bar*/
 
+.search-bar{
+  width: 648px;
+  margin-top: -20px;
+}
+
 #adminbar{
   background-color: #000;
   border-bottom: 1px solid #fff;
@@ -796,6 +801,11 @@ sidebar .current-menu-item a:hover {
 
 .three-col{
   width: 690px;
+
+}
+
+.full{
+  width: 890px;
 
 }
 

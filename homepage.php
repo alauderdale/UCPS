@@ -45,8 +45,6 @@
 
             <?php the_post_thumbnail($size,$default_attr); ?>
 
-          <?php else : ?>
-            <img src="<?php bloginfo('template_url'); ?>/images/slide2.png" alt="">
           <?php endif; ?>
 
         <!--   end the loop-->
@@ -55,7 +53,7 @@
 
       <!--   start the loop-->
         <?php
-         $args = array(
+         $args2 = array(
           'tax_query' => array(
               'relation' => 'OR',
               array(
@@ -70,7 +68,7 @@
               )
             )
          );
-         $loop2 = new WP_Query( $args );
+         $loop2 = new WP_Query( $args2 );
           ?>
         <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
 
@@ -92,7 +90,7 @@
       <div class="events-title">
         <h1>Upcoming</h1>
         <h2>Events</h2>
-        <a href="http://localhost:8888/themes/ucps/?page_id=290">VIEW ALL <span class="arrow">></span></a>
+        <a href="index.php?page_id=290">VIEW ALL <span class="arrow">></span></a>
       </div><!--end events title-->
        <?php
         echo EM_Events::output(

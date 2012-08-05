@@ -26,6 +26,17 @@
     <!--fancybox-->
    <script src="<?php bloginfo('template_url'); ?>/js/fancybox.js"></script>
    <script src="<?php bloginfo('template_url'); ?>/js/fancybox.settings.js"></script>
+   <script>
+    // If the length of the element's string is 0 then display helper message
+        function notEmpty(elem, helperMsg){
+          if(elem.value.length == 0){
+            alert(helperMsg);
+            elem.focus(); // set the focus to this input
+            return false;
+          }
+          return true;
+        }
+   </script>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -43,6 +54,18 @@
       <div id="adminbar-inner">
         <h1>Call Us: <span class="phone">970.673.4546</span></h1>
         <a href="https://si.greeleyschools.org/campus/greeley.jsp" class="checkgrades" target="_blank">check your grades</a>
+        <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+          <div class="search-bar">
+            <input class="search-form" id='req1' type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+            <input 
+            onMouseDown="notEmpty(document.getElementById('req1'), 'Please Enter a Value')"
+            type="submit" 
+            id="searchsubmit" 
+            value="Search" 
+            class="btn"
+             />
+          </div>
+        </form>
       </div><!--end adminbar inner-->
     </div><!--end adminbar -->
     <div class="clearfix"></div>

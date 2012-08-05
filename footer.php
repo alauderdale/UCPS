@@ -16,14 +16,18 @@
       <div class="four-col">
         <h6>Social</h6>
         <ul class="footer-links">
-          <li class="twitter">
-            <a href="#">
-            </a>
+          <li>
+            Coming Soon
           </li>
         </ul>
       </div><!--end 4 col-->
       <div class="four-col">
         <h6>Local Wheather</h6>
+        <ul class="footer-links">
+          <li>
+            Coming Soon
+          </li>
+        </ul>
       </div><!--end 4 col-->
     </div><!--end inner-->
     <div class="copy">

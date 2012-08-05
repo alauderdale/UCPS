@@ -7,14 +7,6 @@
       <h2>
           <?php the_title(); ?>
       </h2>
-      <ul class="post-meta clearfix">
-        <li class="date">
-          <?php the_time('d'); ?> <span><?php the_time('M'); ?> </span><span><?php the_time('Y'); ?>
-        </li>
-        <li class="category">
-          <?php the_category(''); ?>
-        </li>
-      </ul><!--end post meta-->
       <div class="content">
         <?php the_content(); ?>
       </div><!--end content-->

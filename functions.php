@@ -95,6 +95,30 @@ function create_my_post_types() {
     )
   );
 
+  register_post_type( 'ssstaff',
+    array(
+      'labels' => array(
+        'name' => __( 'Secondary School Staff' ),
+        'singular_name' => __( 'SS Staff Member' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+      'public' => true,
+
+    )
+  );
+
+  register_post_type( 'ss_sports',
+    array(
+      'labels' => array(
+        'name' => __( 'Secondary School Activities' ),
+        'singular_name' => __( 'Secondary School Activity' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+      'public' => true,
+
+    )
+  );
+
   register_post_type( 'hs_sports',
     array(
       'labels' => array(

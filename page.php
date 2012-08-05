@@ -5,8 +5,8 @@
     </div>
   </div><!--end heading-->
   <div id="wrapper" class="subpage-wrapper">
-    <?php get_sidebar(); ?>
-    <div class="main three-col">
+
+    <div class="main full">
 
           <!--start the loop-->
           <?php if (have_posts()) : ?>
