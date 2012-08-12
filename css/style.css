@@ -168,6 +168,16 @@ ul {
 
 /*admin bar*/
 
+#adminbar-inner h4{
+  float:left;
+  color:#fff;
+  margin-left:120px;
+  margin-top:-18px;
+  font-family: 'Merriweather', serif;
+  font-size:10pt;
+
+}
+
 .search-bar{
   width: 648px;
   margin-top: -20px;
@@ -245,6 +255,17 @@ ul {
 header{
 
   border-bottom: 20px solid #f2f2f2;
+}
+
+/* Search */
+
+.search-form{
+  border-radius: 20px;
+  padding:2px;
+}
+
+input:focus{
+   outline: none;
 }
 
 /* topnav*/
@@ -467,7 +488,7 @@ header{
 .event-category{
   color: #aaa;
   position: relative;
-  top: -23px;
+  top: -48px;
   text-transform: uppercase;
   font-size: 11pt;
   font-weight: lighter;
@@ -558,7 +579,7 @@ ul.event-meta li{
 
 /*events main*/
 
-.events-list{
+ul.events-list{
   float:right;
   width:755px;
 }
@@ -568,17 +589,17 @@ ul.event-meta li{
   font-size:11pt;
 }
 
-.event-main{
+li.event-main{
   background-color: #fafafa;
   border: 1px solid #f2f2f2;
   padding: 10px 20px 20px 20px;
   width:280px;
   float:left;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   box-shadow: 0px 1px 1px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,1);
   margin-right:31px;
   margin-left:24px;
-  min-height:190px;
+  min-height:220px;
 }
 
 .event-main .event-meta{
@@ -663,6 +684,7 @@ ul.home-announcments {
   float: left;
 }
 
+
 ul.home-announcments li{
   float: left;
   width: 302px;
@@ -684,7 +706,7 @@ ul.home-announcments li{
   margin-bottom: 10pt;
 }
 
-ul.home-announcments li, ul.home-announcments{
+ul.home-announcments li, ul.home-announcments, ul.events-list li, ul.events-list {
 
 -webkit-transition-duration: 0.8s;
      -moz-transition-duration: 0.8s;
@@ -734,6 +756,10 @@ height: auto;
 /*filter*/
 
 #container{
+
+}
+
+.container-fix{
   width: 960px;
   margin: 0 auto;
   padding: 10px 0px;
@@ -759,6 +785,11 @@ ul#filters li a{
   letter-spacing: 1px;
   font-size: 10pt;
   box-shadow: 0px 1px 0 #fff;
+}
+
+ul.event-filters li a{
+  
+  box-shadow: none!important;
 }
 
 ul#filters li a:hover{

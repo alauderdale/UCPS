@@ -17,17 +17,28 @@ Template Name: Events
 
     <div class="featured-header three-col hs-head">
       <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
+      <p>Filter Events:</p>
+      <ul id="filters" class="event-filters">
+        <li><a href="#" class="active" data-filter="*">All</a></li>
+        <?php
+          echo EM_Categories::output(
+            array(
+              'format' => '
+              <li><a href="#" data-filter=".#_CATEGORYID">#_CATEGORYNAME</a></li>
+              '
+              ) );
+        ?>
+       </ul>
 <?php endwhile; endif; ?>
     <!-- end page content-->
     </div><!--end featured-->
-    <div class="events-list">
+    <ul id="container" class="events-list">
       <?php
         echo EM_Events::output(
-          array('orderby' => 'start_date,start_time,name',
+          array(
             'format' => '
 
-            <div class="event-main">
+            <li class="event-main #_CATEGORYID">
         <div class="event-date">
           <span class="event-mon">
            #M
@@ -51,7 +62,7 @@ Template Name: Events
         <div class="event-category event-#_CATEGORYID">
           <h4>#_CATEGORYNAME</h4>
         </div>
-      </div><!--end event main-->
+      </li><!--end event main-->
 
 
             '

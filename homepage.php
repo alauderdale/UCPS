@@ -131,7 +131,7 @@
       <li><a href="#" data-filter=".hsannouncement">Elementary School</a></li>
       <li><a href="#" data-filter=".ssannouncement">Secondary School</a></li>
     </ul>
-    <ul id="container" class="home-announcments">
+    <ul id="container" class="home-announcments container-fix">
 
       <!--   start the loop-->
       <?php

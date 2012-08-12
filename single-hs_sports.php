@@ -30,7 +30,7 @@
           <?php if ( get_post_meta($post->ID, 'custom_text', true) ) : ?>
             <?php $meta = get_post_meta($post->ID, 'custom_text', true);?>
             <div class="act-events">
-              <h3> Upcoming Events for <?php the_title(); ?> </h3>
+              <h3> Upcoming Events</h3>
               <ul class="activity-upcoming-events">
                 <?php
                   echo EM_Events::output(
