@@ -27,12 +27,32 @@
           <h2>
               <?php the_title(); ?>
           </h2>
-            <div class="sport-info clearfix">
-            <?php the_meta(); ?>
+          <?php if ( get_post_meta($post->ID, 'custom_text', true) ) : ?>
+            <?php $meta = get_post_meta($post->ID, 'custom_text', true);?>
+            <div class="act-events">
+              <h3> Upcoming Events for <?php the_title(); ?> </h3>
+              <ul class="activity-upcoming-events">
+                <?php
+                  echo EM_Events::output(
+                    array(
+                      'orderby' => 'start_date,start_time,name',
+                      'tag' => $meta,
+                      'format' => '
+                        <li>
+                        <a class="fancybox fancybox.ajax" href="#_EVENTURL">
+                         #_EVENTNAME 
+                        </a>
+                           - #M #d, #Y #_12HSTARTTIME
+                        </li>
+                      '
+                      ) );
+                 ?>
+              </ul>
             </div>
-            <div class="content">
-              <?php the_excerpt(); ?>
-            </div>
+          <?php endif; ?>
+          <div class="content">
+            <?php the_content(); ?>
+          </div>
         </div>
       </div>
     </div><!--end main-->

@@ -462,6 +462,21 @@ header{
 
 /*events homepage*/
 
+/* events categories */
+
+.event-category{
+  color: #aaa;
+  position: relative;
+  top: -23px;
+  text-transform: uppercase;
+  font-size: 11pt;
+  font-weight: lighter;
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  left: 140px;
+}
+
 .events{
   border: 2px solid #ddd;
   float: left;
@@ -619,6 +634,17 @@ li.event-location{
 
 .em-calendar td{
   font-size:8pt;
+}
+
+/* event activity page */
+
+.act-events{
+  margin-top:20px;
+}
+
+ul.activity-upcoming-events {
+  margin:20px 0;
+
 }
 
 /*home announcments*/

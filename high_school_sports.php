@@ -45,9 +45,6 @@ $loop = new WP_Query( array( 'post_type' => 'hs_sports', 'posts_per_page' => 50 
               <?php the_title(); ?>
             </a>
           </h2>
-            <div class="sport-info clearfix">
-            <?php the_meta(); ?>
-            </div>
             <div class="content">
               <?php the_excerpt(); ?>
             </div>

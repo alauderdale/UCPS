@@ -48,6 +48,9 @@ Template Name: Events
           #_LOCATIONTOWN, #_LOCATIONSTATE
           </li>
         </ul>
+        <div class="event-category event-#_CATEGORYID">
+          <h4>#_CATEGORYNAME</h4>
+        </div>
       </div><!--end event main-->
 
 

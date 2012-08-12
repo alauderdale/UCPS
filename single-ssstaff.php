@@ -40,8 +40,8 @@
             </div>
           </div>
           <div class="pagination">
-          <p class="prev"><?php previous_post_link('%link','«Previous'); ?> </p>
-          <p class="next"> <?php next_post_link('%link','Next»'); ?> </p>
+          <p class="prev"><?php previous_post_link('%link','«Previous Staff Member'); ?> </p>
+          <p class="next"> <?php next_post_link('%link','Next Staff Member»'); ?> </p>
         </div>
         </div><!--end main-->
 

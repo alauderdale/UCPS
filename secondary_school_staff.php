@@ -28,7 +28,7 @@ Template Name: Secondary School Staff List
 
 <!--start the loop-->
 <?php
-$loop = new WP_Query( array( 'post_type' => 'ssstaff', 'posts_per_page' => 50 ) );
+$loop = new WP_Query( array('orderby' => 'title', 'order' => 'ASC' , 'post_type' => 'ssstaff', 'posts_per_page' => 50 ) );
  ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 

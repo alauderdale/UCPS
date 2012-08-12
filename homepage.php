@@ -109,6 +109,9 @@
             <li>
             #_LOCATIONNAME
             </li>
+            <li>
+            #_CATEGORYNAME Event
+            </li>
           </ul>
       </div><!--end event-->
 
@@ -125,7 +128,7 @@
     </div><!--end home announcments header-->
     <ul id="filters">
       <li><a href="#" class="active" data-filter="*">all</a></li>
-      <li><a href="#" data-filter=".hsannouncement">High School</a></li>
+      <li><a href="#" data-filter=".hsannouncement">Elementary School</a></li>
       <li><a href="#" data-filter=".ssannouncement">Secondary School</a></li>
     </ul>
     <ul id="container" class="home-announcments">
